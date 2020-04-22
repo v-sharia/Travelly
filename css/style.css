@@ -1,0 +1,279 @@
+/* 
+    GLOBAL STYLES
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+}
+.main-header {
+  background-color: #192a56;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+nav {
+  min-height: 10vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  color: white;
+  flex: 1 1 40rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+}
+nav ul li a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("../img/landing-page.jpg") no-repeat bottom;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ccc;
+}
+.hero h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.hero h3 {
+  padding: 3rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+button {
+  padding: 2rem 6rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #6886d3;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.location {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("../img/new-york-page.png") no-repeat center;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.location-head {
+  width: 90%;
+  margin: auto;
+  pointer-events: none;
+}
+.location-head h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+
+.location-head h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  background: linear-gradient(60deg, #6886d3, black);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50rem;
+}
+
+.cloud1 {
+  animation: cloudAnimation 2s infinite alternate ease-in-out;
+}
+.cloud2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 2.5s infinite alternate ease-in-out;
+}
+.benefits-head {
+  background-color: #ccc;
+}
+.benefits-head {
+  background-color: #192a56;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.benefits-head h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem 0;
+}
+.benefits-head h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.cards {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 30rem;
+  display: flex;
+  margin: 2.5rem;
+  flex-direction: column;
+  min-height: 50vh;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.card h2 {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #192a56;
+  margin: 2rem 0 1rem;
+}
+.card p {
+  font-size: 1.5rem;
+}
+.img-box img {
+  height: 5rem;
+  margin: 2rem;
+}
+.img-box {
+  background-color: #6886d3;
+}
+
+.contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("../img/contact-mountain.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-wrapper {
+  width: 50%;
+  background-color: rgba(25, 42, 86, 0.5);
+  text-align: center;
+  padding: 5rem 0 0;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form-head h5 {
+  font-size: 3rem;
+}
+button[type="submit"] {
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+}
+input {
+  line-height: 2;
+  border: none;
+  font-size: 1.4rem;
+}
+label {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+.form-name,
+.form-email {
+  padding: 2rem 0;
+}
+.footer {
+  background-color: rgba(25, 42, 86, 1);
+  display: flex;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.footer-head,
+.footer-body {
+  flex: 1 1 40rem;
+}
+.footer-head {
+  text-align: center;
+}
+.footer-body nav ul {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 888px) {
+  nav {
+    text-align: center;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  .cloud {
+    height: 30rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  html {
+    font-size: 50%;
+  }
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
